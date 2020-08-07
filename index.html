@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Ice Orange的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Ice Orange的技术博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="Ice Orange的技术博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Ice Orange">
+<meta property="article:tag" content="内核 逆向">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Ice Orange的技术博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,19 +44,19 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">Ice Orange</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">纵使困奋难行，毅当砥砺奋进</p>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -101,15 +102,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">Ice Orange</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>纵使困奋难行，毅当砥砺奋进<i class="icon icon-quo-right"></i></p>
 			
 			
-				
 			
 				
 			
@@ -133,9 +134,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -152,27 +151,161 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Hello-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-IOS基础操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/03/Hello-Blog/">Hello Blog</a>
+      <a class="article-title" href="/2020/08/04/IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">IOS基础操作</a>
     </h1>
   
 
         
-        <a href="/2020/08/03/Hello-Blog/" class="archive-article-date">
-  	<time datetime="2020-08-03T03:11:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
+        <a href="/2020/08/04/IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2020-08-04T09:51:00.999Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="设备原理与操作"><a href="#设备原理与操作" class="headerlink" title="设备原理与操作"></a>设备原理与操作</h1><h4 id="路由器、交换机、防火墙硬件架构"><a href="#路由器、交换机、防火墙硬件架构" class="headerlink" title="路由器、交换机、防火墙硬件架构"></a>路由器、交换机、防火墙硬件架构</h4><ol>
+<li>计算系统(CPU/引擎)</li>
+<li>电源系统</li>
+<li>存储系统<ul>
+<li>FLASH(暂存卡)</li>
+<li>ROM（只读存储器）<ol>
+<li>POST程序：用于实现加电自检（power -on self-test）</li>
+<li>Bootstrap程序：引导程序, 引导加载操作系统</li>
+<li>Rommon程序：用于密码恢复及系统升级</li>
+</ol>
+</li>
+<li>NVRAM(非易失性存储器–交换机没有NVRAM)<ul>
+<li>放置路由器配置文件(命令独立存储NVRAM)</li>
+<li>配置寄存器，用于修改路由器的启动流程(作为密码回复手段)</li>
+</ul>
+</li>
+<li>RAM</li>
+</ul>
+</li>
+<li>接口系统</li>
+</ol>
+<blockquote>
+<p>可参考《CCNA学习指南第七版》第6章、第7章</p>
+</blockquote>
+<h4 id="设备启动流程"><a href="#设备启动流程" class="headerlink" title="设备启动流程"></a>设备启动流程</h4><h5 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h5><ol>
+<li>加电自检（POST）</li>
+<li>从ROM中加载并运行bootstrap启动微代码</li>
+<li>查看NVRAM中的配置寄存值</li>
+<li>寻找IOS映像文件（FLASH）</li>
+<li>加载IOS映像文件（RAM）</li>
+<li>寻找配置文件（NVRAM）</li>
+<li>加载配置文件（RAM）</li>
+<li>正常运行</li>
+</ol>
+<h5 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h5><ol>
+<li>加电自检（POST）</li>
+<li>加载并运行bootstrap</li>
+<li>寻找IOS映像文件</li>
+<li>加载IOS映像文件</li>
+<li>寻找配置文件</li>
+<li>加载配置文件</li>
+<li>正常启动</li>
+</ol>
+<h3 id="设备基础互联"><a href="#设备基础互联" class="headerlink" title="设备基础互联"></a>设备基础互联</h3><h4 id="设备连接"><a href="#设备连接" class="headerlink" title="设备连接"></a>设备连接</h4><p><strong>设备管理</strong></p>
+<ol>
+<li>近端管理（Console 控制线）</li>
+<li>远程管理（Telnet、HTTP）</li>
+</ol>
+<p><strong>光纤</strong></p>
+<p>单模光纤：速度快、距离远（几十公里）、黄色</p>
+<p>多模光纤：速度慢、距离近（几公里）、橙色</p>
+<p><strong>网线</strong></p>
+<p>根据是否屏蔽：屏蔽双绞线和非屏蔽双绞线</p>
+<p>根据线序类型：直通线（A-A）和交叉线（A-B）</p>
+<p>线序：</p>
+<p>568B：白橙 橙 白绿 蓝 白蓝 绿 白棕 棕</p>
+<p>568A：白绿 绿 白橙 蓝 白蓝 橙 白棕 棕</p>
+<p>记住一种线序，13-26对调就是另一种线序</p>
+<p><strong>规则</strong></p>
+<p>同级/层设备交叉线，不同级/层设备直通线</p>
+<p>路由器与电脑都是同层高级设备</p>
+<p>交换机、集线器是同层低级设备</p>
+<p>（目前大部分设备都支持自动翻转, 所以直通线也能通信）</p>
+<h3 id="Cisco-IOS"><a href="#Cisco-IOS" class="headerlink" title="Cisco IOS"></a>Cisco IOS</h3><p>Internet Operation System网际操作系统, 是思科大部分网络安全设备的操作系统, 用于实现对路由器、交换机、防火墙、入侵检测产品的部署与调试</p>
+<p>IOS系统由Unix/Linux系统做二次开发而成, 采用命令行管理</p>
+<h4 id="虚拟网络环境"><a href="#虚拟网络环境" class="headerlink" title="虚拟网络环境"></a>虚拟网络环境</h4><h5 id="GNS3的配置"><a href="#GNS3的配置" class="headerlink" title="GNS3的配置"></a>GNS3的配置</h5><ol>
+<li>加载虚拟系统</li>
+</ol>
+<p><img src="IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1563931460378.png"></p>
+<p><img src="IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1563931894882.png"></p>
+<ol start="2">
+<li>修改终端软件SecureCRT</li>
+</ol>
+<p><img src="IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1563933677923.png"></p>
+<ol start="3">
+<li>关联Wireshark</li>
+</ol>
+<p><img src="IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1563934957382.png"></p>
+<ol start="4">
+<li>降低CPU消耗</li>
+</ol>
+<p><img src="IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1563935274128.png"></p>
+<h5 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h5><p>f：fastethernet 快速以太网</p>
+<p>e：ethernet 以太网</p>
+<p>s：serial 广域网</p>
+<h5 id="模块类型"><a href="#模块类型" class="headerlink" title="模块类型"></a>模块类型</h5><p>NM-1FE 1个快速以太网模块</p>
+<p>NM-1E 1个以太网模块</p>
+<p>NM-4E 4个以太网模块</p>
+<p>NM-16ESW 16个交换快速以太网, 用于模拟交换机</p>
+<p>NM-4T 4广域网扣</p>
+<h5 id="接口序号"><a href="#接口序号" class="headerlink" title="接口序号"></a>接口序号</h5><p>前面的数值为模块序号</p>
+<p>后面的数值为接口序号</p>
+<p>1/2 表示第一个模块的第2个借口</p>
+<h4 id="IOS操作模式"><a href="#IOS操作模式" class="headerlink" title="IOS操作模式"></a>IOS操作模式</h4><p><strong>安全级别</strong></p>
+<p>15    配置模式 config# 超级管理员, 级别最高</p>
+<p>2-14    特权模式 # 管理员, 级别中等</p>
+<p>0-1    用户模式 &gt; 普通用户, 级别最低</p>
+<p><strong>参考命令</strong></p>
+<p>enable：从用户模式切换到特权模式</p>
+<p>configure terminal：从特权模式切换到配置模式</p>
+<p>exit：退出特权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">从GNS3退出到用户权限</span><br><span class="line">configuration terminal</span><br><span class="line">line console 0</span><br><span class="line">no privilege level 15</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<p>Ctrl+Shift+6：中断命令执行</p>
+<p>？：可执行的命令（帮助）</p>
+<h5 id="IOS常用命令"><a href="#IOS常用命令" class="headerlink" title="IOS常用命令"></a>IOS常用命令</h5><p><u>1 用户模式</u></p>
+<p>ping //测试连通性</p>
+<p>traceroute //链路追踪</p>
+<p>Show arp //查看ARP表项（arp -a）</p>
+<p>Show clock //查看系统时间</p>
+<p>Show version //查看系统版本信息, 软件和硬件信息</p>
+<p><u>2 特权模式</u></p>
+<p>Show flash //查看硬盘大小</p>
+<p>Show running-config //查看运行配置（内存）</p>
+<p>Show startup-config //查看初始配置（NVRAM）</p>
+<p>Copy run start //保存配置（从内存保存到硬盘）</p>
+<p>Write //保存配置</p>
+<p>Show ip interface brief //查看接口三层地址信息（ipcinfig）</p>
+<p>Show interface f0/0 //查看接口具体信息（ipconfig /all）</p>
+<p><u>3 配置模式</u></p>
+<p>hostname R1 //定义主机名</p>
+<p>Interface f0/0 //进入接口模式</p>
+<p>No Shutdown //打开接口</p>
+<p>Ip address 12.1.1.1 255.255.255.0 //定义接口IP</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">配置IP地址</span><br><span class="line">interface f0&#x2F;0</span><br><span class="line">no shutdown</span><br><span class="line">ip add 12.1.1.1 255.255.255.0</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>line vty 0 //进入虚拟终端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">R2设置远程登录</span><br><span class="line">password xxxxx</span><br><span class="line">login</span><br><span class="line">R1登录远程服务端</span><br><span class="line">telnet 12.1.1.2</span><br></pre></td></tr></table></figure>
+
+<p>no ip domain-lookup //关闭域名解析</p>
+<p>line console 0 //进入console口模式</p>
+<p>​    exec-timeout 0 0 //关闭发呆超时</p>
+<p>​    exec-timeout 2 30 //代表2分30秒之后被”踢”出命令终端</p>
+<p>logging synchronous //日志输出同步（日志回显换行）</p>
+
       
 
       
@@ -184,7 +317,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/03/Hello-Blog/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/04/IOS%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">展开全文 >></a>
         </p>
       
 
@@ -299,7 +432,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 Ice Orange
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
